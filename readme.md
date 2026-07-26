@@ -28,6 +28,7 @@ Sheryians-Notes/
 │   ├─ codespace.html
 │   ├─ ejs.html
 │   ├─ eks.html
+│   ├─ github.html
 │   ├─ jest-testing.html
 │   ├─ jwt-auth.html
 │   ├─ kuber.html
