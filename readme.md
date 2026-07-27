@@ -36,6 +36,7 @@ Sheryians-Notes/
 │   ├─ MCP.html
 │   ├─ mutliagent.html
 │   ├─ rate-limiting.html
+│   ├─ react-optimization.html
 │   ├─ redis.html
 │   ├─ sandbox.html
 │   ├─ skaffold.html
