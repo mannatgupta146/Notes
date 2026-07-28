@@ -1,97 +1,106 @@
 <div class="shared-navbar" id="shared-navbar">
   <style id="shared-note-nav">
-  :root {
-    --shared-nav-height: 64px;
-    --nav-ink: #0E0F14;
-    --nav-paper: #F5F2EB;
-    --nav-paper2: #EDE9DF;
-    --nav-rule: #D4CEBC;
-    --nav-muted: #6B6455;
-    --nav-accent: #C84B1F;
-  }
-  .shared-navbar {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 12px;
-    z-index: 10000;
-    padding: 0 16px;
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease !important;
-  }
-  .shared-navbar.nav-hidden {
-    transform: translateY(-90px) !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-  }
-  .shared-navbar .note-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    align-items: center;
-    margin: 0 auto;
-    padding: 10px 14px;
-    max-width: 1440px;
-    background: rgba(245, 242, 235, 0.94);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid var(--nav-rule);
-    border-radius: 14px;
-    box-shadow: 0 16px 36px rgba(14, 15, 20, 0.08);
-  }
-  .shared-navbar .note-nav a, 
-  .shared-navbar .note-nav button {
-    font-family: 'IBM Plex Mono', monospace !important;
-    font-size: 11px !important;
-    font-weight: 500 !important;
-    letter-spacing: .06em !important;
-    text-transform: uppercase !important;
-    border: 1px solid var(--nav-rule) !important;
-    background: rgba(255, 255, 255, 0.6) !important;
-    color: var(--nav-ink) !important;
-    padding: 8px 14px !important;
-    border-radius: 999px !important;
-    cursor: pointer !important;
-    text-decoration: none !important;
-    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  }
-  .shared-navbar .note-nav a:hover, 
-  .shared-navbar .note-nav button:hover {
-    transform: translateY(-1px) !important;
-    border-color: var(--nav-accent) !important;
-    color: var(--nav-accent) !important;
-    background: #fff !important;
-    box-shadow: 0 6px 16px rgba(200, 75, 31, 0.08) !important;
-  }
-  .shared-navbar .note-nav a.active {
-    background: var(--nav-accent) !important;
-    border-color: var(--nav-accent) !important;
-    color: #fff !important;
-    box-shadow: 0 4px 12px rgba(200, 75, 31, 0.2) !important;
-  }
-  .shared-navbar .note-nav a.active:hover {
-    background: var(--nav-accent) !important;
-    border-color: var(--nav-accent) !important;
-    color: #fff !important;
-    transform: none !important;
-  }
-  .shared-navbar .note-nav .primary {
-    background: var(--nav-ink) !important;
-    border-color: var(--nav-ink) !important;
-    color: #fff !important;
-  }
-  .shared-navbar .note-nav .primary:hover {
-    background: var(--nav-accent) !important;
-    border-color: var(--nav-accent) !important;
-    color: #fff !important;
-    box-shadow: 0 6px 16px rgba(200, 75, 31, 0.15) !important;
-  }
-  
-  /* Add top spacing to page content when navbar is present */
-  body.has-shared-navbar .layout,
-  body.has-shared-navbar .crossnote,
-  body.has-shared-navbar > main { 
-    padding-top: calc(var(--shared-nav-height) + 12px) !important; 
-  }
+    :root {
+      --shared-nav-height: 64px;
+      --nav-ink: #0E0F14;
+      --nav-paper: #F5F2EB;
+      --nav-paper2: #EDE9DF;
+      --nav-rule: #D4CEBC;
+      --nav-muted: #6B6455;
+      --nav-accent: #C84B1F;
+    }
+
+    .shared-navbar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 12px;
+      z-index: 10000;
+      padding: 0 16px;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease !important;
+    }
+
+    .shared-navbar.nav-hidden {
+      transform: translateY(-90px) !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+
+    .shared-navbar .note-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin: 0 auto;
+      padding: 10px 14px;
+      max-width: 1440px;
+      background: rgba(245, 242, 235, 0.94);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid var(--nav-rule);
+      border-radius: 14px;
+      box-shadow: 0 16px 36px rgba(14, 15, 20, 0.08);
+    }
+
+    .shared-navbar .note-nav a,
+    .shared-navbar .note-nav button {
+      font-family: 'IBM Plex Mono', monospace !important;
+      font-size: 11px !important;
+      font-weight: 500 !important;
+      letter-spacing: .06em !important;
+      text-transform: uppercase !important;
+      border: 1px solid var(--nav-rule) !important;
+      background: rgba(255, 255, 255, 0.6) !important;
+      color: var(--nav-ink) !important;
+      padding: 8px 14px !important;
+      border-radius: 999px !important;
+      cursor: pointer !important;
+      text-decoration: none !important;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    .shared-navbar .note-nav a:hover,
+    .shared-navbar .note-nav button:hover {
+      transform: translateY(-1px) !important;
+      border-color: var(--nav-accent) !important;
+      color: var(--nav-accent) !important;
+      background: #fff !important;
+      box-shadow: 0 6px 16px rgba(200, 75, 31, 0.08) !important;
+    }
+
+    .shared-navbar .note-nav a.active {
+      background: var(--nav-accent) !important;
+      border-color: var(--nav-accent) !important;
+      color: #fff !important;
+      box-shadow: 0 4px 12px rgba(200, 75, 31, 0.2) !important;
+    }
+
+    .shared-navbar .note-nav a.active:hover {
+      background: var(--nav-accent) !important;
+      border-color: var(--nav-accent) !important;
+      color: #fff !important;
+      transform: none !important;
+    }
+
+    .shared-navbar .note-nav .primary {
+      background: var(--nav-ink) !important;
+      border-color: var(--nav-ink) !important;
+      color: #fff !important;
+    }
+
+    .shared-navbar .note-nav .primary:hover {
+      background: var(--nav-accent) !important;
+      border-color: var(--nav-accent) !important;
+      color: #fff !important;
+      box-shadow: 0 6px 16px rgba(200, 75, 31, 0.15) !important;
+    }
+
+    /* Add top spacing to page content when navbar is present */
+    body.has-shared-navbar .layout,
+    body.has-shared-navbar .crossnote,
+    body.has-shared-navbar>main {
+      padding-top: calc(var(--shared-nav-height) + 12px) !important;
+    }
   </style>
   <div class="note-nav">
     <a href="/Sheryians-Notes/index.html" data-page="index">Home</a>
@@ -115,25 +124,25 @@
 </div>
 
 <script>
-(function() {
-  const currentFile = window.location.pathname.split('/').pop() || 'index.html';
-  const pageName = currentFile.replace('.html', '');
-  const link = document.querySelector(`#shared-navbar a[data-page="${pageName}"]`);
-  if(link) link.classList.add('active');
+  (function () {
+    const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+    const pageName = currentFile.replace('.html', '');
+    const link = document.querySelector(`#shared-navbar a[data-page="${pageName}"]`);
+    if (link) link.classList.add('active');
 
-  // Scroll logic to hide/show navbar
-  let lastScrollY = window.scrollY;
-  const navbar = document.getElementById('shared-navbar');
-  if (navbar) {
-    window.addEventListener('scroll', () => {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 80) {
-        navbar.classList.add('nav-hidden');
-      } else {
-        navbar.classList.remove('nav-hidden');
-      }
-      lastScrollY = currentScrollY;
-    }, { passive: true });
-  }
-})();
+    // Scroll logic to hide/show navbar
+    let lastScrollY = window.scrollY;
+    const navbar = document.getElementById('shared-navbar');
+    if (navbar) {
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > lastScrollY && currentScrollY > 80) {
+          navbar.classList.add('nav-hidden');
+        } else {
+          navbar.classList.remove('nav-hidden');
+        }
+        lastScrollY = currentScrollY;
+      }, { passive: true });
+    }
+  })();
 </script>
